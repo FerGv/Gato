@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Gato</string>
-    <string name="txt_historial">Historial</string>
+    <string name="txt_record">Historial</string>
+    <string name="txt_delete_record">Borrar Historial</string>
+    <string name="txt_new_game">Juego nuevo</string>
 </resources>

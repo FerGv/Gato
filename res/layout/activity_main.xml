@@ -35,10 +35,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box2"
@@ -47,10 +48,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box3"
@@ -59,10 +61,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
         </TableRow>
         <TableRow android:layout_weight="1">
@@ -73,10 +76,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box5"
@@ -85,10 +89,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box6"
@@ -97,10 +102,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
         </TableRow>
         <TableRow android:layout_weight="1">
@@ -111,10 +117,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box8"
@@ -123,10 +130,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
             <EditText
                 android:id="@+id/activity_main_box9"
@@ -135,10 +143,11 @@
                 android:background="@drawable/border"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:textColor="@color/colorCell"
+                android:textColor="@color/white"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="fillBox"
+                android:textSize="35sp"
                 />
         </TableRow>
     </TableLayout>
@@ -149,25 +158,36 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:gravity="center">
-        <!--<LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-        </LinearLayout>-->
         <Button
             android:id="@+id/activity_main_btnRecord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_historial"
+            android:text="@string/txt_record"
             android:onClick="btnRecord_click"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
             />
         <Button
-            android:id="@+id/activity_main_btnRepeat"
+            android:id="@+id/activity_main_btnDeleteRecord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Juego nuevo"
-            android:onClick="btnRepeat_click"
+            android:text="@string/txt_delete_record"
+            android:onClick="btnDeleteRecord_click"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            />
+        <Button
+            android:id="@+id/activity_main_btnNewGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_new_game"
+            android:onClick="btnNewGame_click"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:padding="5dp"
             />
     </LinearLayout>
 </LinearLayout>

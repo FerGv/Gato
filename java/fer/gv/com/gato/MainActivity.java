@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         this.box8 = (EditText) findViewById(R.id.activity_main_box8);
         this.box9 = (EditText) findViewById(R.id.activity_main_box9);
         this.btnRecord = (Button) findViewById(R.id.activity_main_btnRecord);
-        this.btnRepeat = (Button) findViewById(R.id.activity_main_btnRepeat);
+        this.btnRepeat = (Button) findViewById(R.id.activity_main_btnNewGame);
 
         this.arrayBoxes = new EditText[]{this.box1, this.box2, this.box3, this.box4, this.box5, this.box6, this.box7, this.box8, this.box9};
         this.sizeArrayBoxes = this.arrayBoxes.length;
@@ -81,9 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (sizeFilledBoxes == 9){
-            Toast.makeText(this, "Perdiste", Toast.LENGTH_SHORT).show();
-        } else if (validateOne(filledBoxes) || validateFive(filledBoxes) || validateNine(filledBoxes)) {
+        if (validateOne(filledBoxes) || validateFive(filledBoxes) || validateNine(filledBoxes)) {
             SharedPreferences prefs = this.getSharedPreferences("prefs", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
 
@@ -109,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             this.locked = true;
+        } else if (sizeFilledBoxes == 9){
+            Toast.makeText(this, "Gato", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -120,13 +120,25 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, record, Toast.LENGTH_LONG).show();
     }
 
-    public void btnRepeat_click(View sender) {
+    public void btnNewGame_click(View sender) {
         for (int i = 0; i < this.sizeArrayBoxes; i++) {
             this.arrayBoxes[i].setText("");
             this.arrayBoxes[i].setBackgroundResource(R.drawable.border);
         }
         this.counterTurn = 0;
         this.locked = false;
+        Toast.makeText(this, "Inicia X", Toast.LENGTH_SHORT).show();
+    }
+
+    public void btnDeleteRecord_click(View sender) {
+        SharedPreferences prefs = this.getSharedPreferences("prefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putInt("counterX", 0);
+        editor.putInt("counterO", 0);
+        editor.apply();
+
+        Toast.makeText(this, "Historial Borrado", Toast.LENGTH_SHORT).show();
     }
 
     static boolean searchNumber(int[] filledBoxes, int number) {
